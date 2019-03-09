@@ -25,12 +25,12 @@ public class App
             chien1 = new Chien("Arbus"),
             chien2 = new Chien("Mumu");
 
-        chien.setProprietaire(personne);
-        personne.setChien(chien);
 
         Chenil chenil1 = new Chenil("Chenil1"),
                 chenil2 = new Chenil("Chenil2");
 
+        chien.setProprietaire(personne);
+        personne.setChien(chien);
         chien1.setChenil(chenil1);
         chien2.setChenil(chenil1);
 

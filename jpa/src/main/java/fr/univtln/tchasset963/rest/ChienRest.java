@@ -15,14 +15,16 @@ public class ChienRest {
     private DAO Dao = new DAO();
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_JSON})
     public List<Chien> getChiens() {
         TypedQuery<Chien> query = Dao.getEm().createNamedQuery("Chien.findAll", Chien.class);
         List<Chien> results = query.getResultList();
+        System.out.println(results);
         return results;
     }
 
     @GET
+    @Produces({MediaType.APPLICATION_JSON})
     @Path("/{surnom}")
     public Chien getChien(@QueryParam("surnom") final String surnom) {
         TypedQuery<Chien> query = Dao.getEm().createNamedQuery("Chien.findByName", Chien.class);
@@ -31,6 +33,7 @@ public class ChienRest {
     }
 
     @PUT
+    @Produces({MediaType.APPLICATION_JSON})
     public void addChien(@QueryParam("prenom") String surnom) {
         Dao.getEm().persist(new Chien(surnom));
     }

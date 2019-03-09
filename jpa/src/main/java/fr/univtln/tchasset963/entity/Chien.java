@@ -30,7 +30,7 @@ public class Chien {
     @ManyToOne(cascade = CascadeType.ALL)
     private Chenil chenil;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "chien", cascade = CascadeType.ALL)
     private List<Pathologie> pathologie = new ArrayList<>();
 
     public static List<Chien> chienList = new ArrayList<>();
@@ -60,8 +60,7 @@ public class Chien {
     @Override
     public String toString() {
         return "Chien {" +
-                "surnom='" + surnom + '\'' +
-                ", proprietaire=" + proprietaire +
+                "surnom='" + surnom +
                 '}'+"\n";
     }
 
@@ -87,6 +86,7 @@ public class Chien {
 
     public void setChenil(Chenil chenil) {
         this.chenil = chenil;
+        chenil.getListChiens().add(this);
     }
 
     public List<Pathologie> getPathologie() {
@@ -95,5 +95,9 @@ public class Chien {
 
     public void setPathologie(List<Pathologie> pathologie) {
         this.pathologie = pathologie;
+    }
+    public void setPathologie(Pathologie pathologie) {
+        this.getPathologie().add(pathologie);
+        pathologie.setChien(this);
     }
 }

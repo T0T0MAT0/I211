@@ -13,7 +13,7 @@ public class Chenil {
     @Id
     private String nom;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "chenil",cascade = CascadeType.ALL)
     private List<Chien> listChiens = new ArrayList();
 
     public Chenil() {    }
@@ -32,5 +32,8 @@ public class Chenil {
 
     public void setListChiens(List<Chien> listChiens) {
         this.listChiens = listChiens;
+    }
+    public void setChien(Chien chien) {
+        this.getListChiens().add(chien);
     }
 }

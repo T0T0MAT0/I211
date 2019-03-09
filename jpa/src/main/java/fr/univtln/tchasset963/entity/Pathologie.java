@@ -45,5 +45,6 @@ public class Pathologie {
 
     public void setChien(Chien chien) {
         this.chien = chien;
+        chien.setPathologie(this);
     }
 }

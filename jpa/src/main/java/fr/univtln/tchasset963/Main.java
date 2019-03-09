@@ -1,6 +1,5 @@
 package fr.univtln.tchasset963;
 
-import fr.univtln.tchasset963.entity.Chien;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;

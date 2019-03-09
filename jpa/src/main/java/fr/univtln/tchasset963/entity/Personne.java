@@ -36,6 +36,7 @@ public class Personne {
 
     public void setChien(Chien chien) {
         this.chien = chien;
+        chien.setProprietaire(this);
     }
 
     //@Id
