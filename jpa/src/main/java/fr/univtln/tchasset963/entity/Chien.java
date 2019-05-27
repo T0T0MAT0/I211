@@ -5,12 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-//@Table(
-//        name = "Chien",
-//        uniqueConstraints={
-//                @UniqueConstraint(name="id", columnNames={"PERSONNE_NOM", "PERSONNE_PRENOM"})
-//        }
-//)
 @NamedQueries({
         @NamedQuery(name="Chien.findAll", query = "SELECT c FROM Chien c"),
         @NamedQuery(name="Chien.findByName", query="SELECT c FROM Chien c WHERE c.surnom = :surnom")

@@ -39,6 +39,8 @@ public class Personne {
         chien.setProprietaire(this);
     }
 
+    //Debut du TP
+
     //@Id
     //@GeneratedValue
     //private int id;

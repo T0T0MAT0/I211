@@ -1,7 +1,5 @@
 package fr.univtln.tchasset963.entity;
 
-import fr.univtln.tchasset963.entity.Chien;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;

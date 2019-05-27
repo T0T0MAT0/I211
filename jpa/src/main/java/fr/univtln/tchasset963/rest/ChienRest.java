@@ -19,7 +19,6 @@ public class ChienRest {
     public List<Chien> getChiens() {
         TypedQuery<Chien> query = Dao.getEm().createNamedQuery("Chien.findAll", Chien.class);
         List<Chien> results = query.getResultList();
-        System.out.println(results);
         return results;
     }
 

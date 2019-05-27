@@ -21,7 +21,6 @@ public class Main {
      */
     public static HttpServer startServer() {
         // create a resource config that scans for JAX-RS resources and providers
-        // in fr.univtln.tchasset963 package
         final ResourceConfig rc = new ResourceConfig().packages("fr.univtln.tchasset963");
 
         // create and start a new instance of grizzly http server
